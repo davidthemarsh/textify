@@ -36,7 +36,9 @@ Where each entry in the provider list is another url that can be accessed by /ap
 
 Each provider will provide the following end points:
 
-  * **info** - Provides a json object that provides details and information about this provider.  The response has the following format:
+### **/info**
+
+Provides a json object that provides details and information about this provider.  The response has the following format:
 
 ```
 {
@@ -76,3 +78,26 @@ Each provider will provide the following end points:
   *  **range** - This input represents input that must be contained to a range.  There will be three entries available: min, max and content.  Content will define the type of range while the min and max will describe the minimum and maximum accepted entries.  Content may be one of the following items:
       * **numerical** - numbers
       * **alphabetical** - letters.  No digits, punctuation or other characters.
+
+### **/**
+Accepts all parameters described by the **info** end point.  The response will be given in the following format:
+
+```
+{
+    request:{
+                  param1:value_given,
+                  ...
+                  paramN:value_given
+            },
+    status: "successful",
+    errors: {
+                  param1:"stuff happened"
+            },
+    results: "<(^.^<)"
+}
+```
+
+ * **request** - A summary of the request you made to produce the results
+ * **status** - overall status of the request.  Possible entries are 'successful' or 'error'
+ * **errors** - A map of error codes and the associated message.  Any error code matching a request parameter is a message about that parameter and why it is an error.
+ * **results** Textual results about the image in question.
