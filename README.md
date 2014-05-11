@@ -93,7 +93,8 @@ Accepts all parameters described by the **info** end point.  The response will b
     errors: {
                   param1:"stuff happened"
             },
-    results: "<(^.^<)"
+    results: "<(^.^<)",
+    raw_link: "http://art.ngfiles.com/images/182000/182334_carrotdwarf_i-hate-bees.png"
 }
 ```
 
@@ -101,3 +102,4 @@ Accepts all parameters described by the **info** end point.  The response will b
  * **status** - overall status of the request.  Possible entries are 'successful' or 'error'
  * **errors** - A map of error codes and the associated message.  Any error code matching a request parameter is a message about that parameter and why it is an error.
  * **results** Textual results about the image in question.
+ * **raw_link** URL to a raw version of the image.
