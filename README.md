@@ -29,9 +29,9 @@ The root url provides the following end points:
 }
 ```
 
-Where each entry in the provider list is another url that can be accessed by /api/**provider1**
+Where each entry in the provider list is another url that can be accessed by /provider/**provider1**
 
-## Provider (/api/*provider*) Structure
+## Provider (/provider/*provider_name*) Structure
 
 
 Each provider will provide the following end points:
